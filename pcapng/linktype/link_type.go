@@ -1,0 +1,121 @@
+//go:generate stringer -type=LinkType -output=link_type_string.go
+package linktype
+
+/*
+http://www.tcpdump.org/linktypes.html
+*/
+
+type LinkType uint16
+
+const (
+	Null                       LinkType = 0
+	Ethernet                   LinkType = 1
+	AX25                       LinkType = 3
+	IEEE802_5                  LinkType = 6
+	ArcnetBSD                  LinkType = 7
+	SLIP                       LinkType = 8
+	PPP                        LinkType = 9
+	FDDI                       LinkType = 10
+	PPP_HDLC                   LinkType = 50
+	PPP_Ether                  LinkType = 51
+	ATM_RFC1483                LinkType = 100
+	Raw                        LinkType = 101
+	C_HDLC                     LinkType = 104
+	IEEE802_11                 LinkType = 105
+	FRelay                     LinkType = 107
+	Loop                       LinkType = 108
+	LinuxSLL                   LinkType = 113
+	LTalk                      LinkType = 114
+	PFLog                      LinkType = 117
+	IEEE802_11_Prism           LinkType = 119
+	IPOverFC                   LinkType = 122
+	SunATM                     LinkType = 123
+	IEEE802_11_Radiotap        LinkType = 127
+	ArcnetLinux                LinkType = 129
+	AppleIPOverIEEE1394        LinkType = 138
+	MTP2WithPHDR               LinkType = 139
+	MTP2                       LinkType = 140
+	MTP3                       LinkType = 141
+	SCCP                       LinkType = 142
+	DOCSIS                     LinkType = 143
+	LinuxIrDA                  LinkType = 144
+	User0                      LinkType = 147
+	User1                      LinkType = 148
+	User2                      LinkType = 149
+	User3                      LinkType = 150
+	User4                      LinkType = 151
+	User5                      LinkType = 152
+	User6                      LinkType = 153
+	User7                      LinkType = 154
+	User8                      LinkType = 155
+	User9                      LinkType = 156
+	User10                     LinkType = 157
+	User11                     LinkType = 158
+	User12                     LinkType = 159
+	User13                     LinkType = 160
+	User14                     LinkType = 161
+	User15                     LinkType = 162
+	IEEE802_11_AVS             LinkType = 163
+	BACnet_MS_TP               LinkType = 165
+	PPP_PPPD                   LinkType = 166
+	GPRS_LLC                   LinkType = 169
+	GPF_T                      LinkType = 170
+	GPF_F                      LinkType = 171
+	LinuxLAPD                  LinkType = 177
+	Bluetooth_HCI_H4           LinkType = 187
+	USBLinux                   LinkType = 189
+	PPI                        LinkType = 192
+	IEEE802_15_4               LinkType = 195
+	SITA                       LinkType = 196
+	ERF                        LinkType = 197
+	Bluetooth_HCI_H4_With_PHDR LinkType = 201
+	AX25_KISS                  LinkType = 202
+	LAPD                       LinkType = 203
+	PPPWithDIR                 LinkType = 204
+	C_HDLC_With_DIR            LinkType = 205
+	FRelayWithDIR              LinkType = 206
+	IPMBLinux                  LinkType = 209
+	IEEE802_15_4_NonASK_PHY    LinkType = 215
+	USBLinuxMmapped            LinkType = 220
+	FC_2                       LinkType = 224
+	FC_2_WithFrameDelims       LinkType = 225
+	IPNET                      LinkType = 226
+	CAN_SocketCAN              LinkType = 227
+	IPV4                       LinkType = 228
+	IPV6                       LinkType = 229
+	IEEE802_15_4_NoFCS         LinkType = 230
+	DBus                       LinkType = 231
+	DVB_CI                     LinkType = 235
+	MUX27010                   LinkType = 236
+	STANAG_5066_D_PDU          LinkType = 237
+	NFLog                      LinkType = 239
+	NetAnalyzer                LinkType = 240
+	NetAnalyzerTransparent     LinkType = 241
+	IPOIB                      LinkType = 242
+	MPEG_2_TS                  LinkType = 243
+	NG40                       LinkType = 244
+	NFC_LLCP                   LinkType = 245
+	InfiniBand                 LinkType = 247
+	SCTP                       LinkType = 248
+	USBPcap                    LinkType = 249
+	RTAC_Serial                LinkType = 250
+	Bluetooth_LE_LL            LinkType = 251
+	Netlink                    LinkType = 253
+	Bluetooth_LinuxMonitor     LinkType = 254
+	Bluetooth_BREDR_BB         LinkType = 255
+	BlueTooth_LE_LL_With_PHDR  LinkType = 256
+	PROFIBUS                   LinkType = 257
+	PKTAP                      LinkType = 258
+	EPON                       LinkType = 259
+	IPMI_HPM_2                 LinkType = 260
+	ZWaveR1R2                  LinkType = 261
+	ZWaveR3                    LinkType = 262
+	WattStopperDLM             LinkType = 263
+	ISO14443                   LinkType = 264
+	RDS                        LinkType = 265
+	USBDarwin                  LinkType = 266
+	SDLC                       LinkType = 268
+	LoRaTap                    LinkType = 270
+	VSock                      LinkType = 271
+	NordicBLE                  LinkType = 272
+)
